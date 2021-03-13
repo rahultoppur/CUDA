@@ -32,7 +32,7 @@ You will have to read from a file in order to populate your liked list. `fscanf`
 ```c
 int fscanf(FILE* fp, char* format, ...)
 ```
-`fscanf` is identical to other C functions like `scanf` and `printf`, except that the first argument is a file pointer with the desired format string as the second argument. Note that the argumnts to `fscanf` **must** be pointers: `fscanf(myfile, &n)` instead of `fscanf(myfile, n)`.  
+`fscanf` is identical to other C functions like `scanf` and `printf`, except that the first argument is a file pointer and the second argument is the desired format string. Note that the arguments to `fscanf` **must** be pointers: `fscanf(myfile, &n)` vs. `fscanf(myfile, n)`.  
 
 ## Tasks
 * The defintion for a `stock` struct in the starter code is incomplete--go ahead and fix this.
@@ -50,4 +50,4 @@ int fscanf(FILE* fp, char* format, ...)
 
 You are encouraged to use a tool like `valgrind` to make sure you don't have any memory leaks in your final implementation.
 
-Some starter code has been provided for you. Feel free to create any other helper functions for this assignment.
+Some starter code has been provided for you. Feel free to create any other helper functions you need for this assignment.
