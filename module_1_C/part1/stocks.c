@@ -13,7 +13,7 @@
 
 /* TODO: Finish implementing the stock_t type */
 typedef struct stock {
-    char* symbol;       /* Ticket-tape symbol (i.e., GOOG) */
+    char* symbol;       /* Ticker-tape symbol (i.e., GOOG) */
     ...
     ...
 
