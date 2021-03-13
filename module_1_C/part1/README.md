@@ -1,7 +1,7 @@
 # Stock Portfolio
 
 ## Introduction
-It's nearing April 15th, and after a year of investing it's time to do your taxes. You've made quite a few risky investments in the stock market, and you need to find the total value of your portfolio. Throughout the year, you have noted down each of your trades in a file, `portfolio.txt`. This file is in the following format:
+It's nearing April 15th, and after a year of investing it's time to do your taxes. You've made quite a few risky investments in the stock market, and you need to find the total value of your portfolio. Throughout the year, you have noted down each of your trades in a file named `portfolio.txt`. This file has the following format: 
 
 ```txt
 GOOG 2000 2080 1
@@ -17,7 +17,7 @@ Each row contains:
 ## Linked List
 Your task is to create a Linked List populated with the stocks from `portfolio.txt`. 
 
-Recall that a Linked List takes the following structure:
+Recall that a Linked List has the following structure:
 
 ```c
 typedef struct node {
@@ -28,7 +28,7 @@ typedef struct node {
 Each node has some value associated with it, as well as a pointer to the next node in the list. In this assignment, you'll need to allocate memory using `malloc` and make sure you `free` that memory before your program terminates. Each node will be represented by a `stock` struct.
 
 ## File I/O
-You will have to read from a file in order to populate your liked list. `fscanf` can help with this:
+You will have to read from a file in order to populate your Linked List. `fscanf` can help with this:
 ```c
 int fscanf(FILE* fp, char* format, ...)
 ```
@@ -45,7 +45,7 @@ int fscanf(FILE* fp, char* format, ...)
         TSLA  | 600   | 572   | 4     |
         FB    | 255   | 261   | 4     |
         ```
-        * You can use the "justify" option of `printf` to obtain the format above
+        * You can use the "left-justify" option of `printf` to obtain the format above `printf("%-5d", baz)`
     * `total_value`: Finds the total value of the portfolio
         
 
