@@ -11,22 +11,22 @@
  */
 
 
-// TODO: Finish implementing the stock_t type
+/* TODO: Finish implementing the stock_t type */
 typedef struct stock {
-    char* symbol;       // Ticket-tape symbol (i.e., GOOG)
+    char* symbol;       /* Ticket-tape symbol (i.e., GOOG) */
     ...
     ...
 
 }stock_t;
 
-// TODO: Declare your function prototypes here
-// Note that you may need to change the signatures provided
+/* TODO: Declare your function prototypes here */
+/* Note that you may need to change the signatures provided */
 void print_portfolio(...);
 void create_portfolio(...);
 void free_portfolio(...);
 void total_value(...);
 
-// Add any other helper functions you would like
+/* Add any other helper functions you would like */
 
 int main() {
 
