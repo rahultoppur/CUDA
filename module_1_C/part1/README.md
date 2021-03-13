@@ -9,15 +9,15 @@ TSLA 600 572 4
 FB 255 261 4
 ```
 Each row contains:
-* ticker-tape symbol (`GOOG`)
-* purchase price (`2000`) 
-* current price (`2080`) 
-* number of shares (`1`)
+* Ticker-tape symbol (`GOOG`)
+* Purchase price (`2000`) 
+* Current price (`2080`) 
+* Number of shares (`1`)
 
 ## Linked List
-Your task is to create a linked list populated with the stocks from `portfolio.txt`. 
+Your task is to create a Linked List populated with the stocks from `portfolio.txt`. 
 
-Recall that a linked list takes the following structure:
+Recall that a Linked List takes the following structure:
 
 ```c
 typedef struct node {
@@ -37,14 +37,16 @@ int fscanf(FILE* fp, char* format, ...)
 ## Tasks
 * The defintion for a `stock` struct in the starter code is incomplete--go ahead and fix this.
 * Implement the following functions:
-    * `create_portfolio`: Creates a linked list (where each element is a `stock`)
-    * `free_portfolio`: Frees your linked list (free every node that you have allocated memory for)
-    * `print_portfolio`: Prints your linked list in the following format:
-        ```
+    * `create_portfolio`: Creates a Linked List (where each element is a `stock`)
+    * `free_portfolio`: Frees your Linked List (free every node that you have allocated memory for)
+    * `print_portfolio`: Prints your Linked List in the following format:
+        * 
+        ```txt
         GOOG  | 2000  | 2080  | 1     |
         TSLA  | 600   | 572   | 4     |
         FB    | 255   | 261   | 4     |
         ```
+        * You can use the "justify" option of `printf` to obtain the format above
     * `total_value`: Finds the total value of the portfolio.
         
 
