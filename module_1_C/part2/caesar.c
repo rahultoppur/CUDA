@@ -9,7 +9,7 @@
  */
 
 int main() {
-	char c[] = "dahhk pdana cajanwh gajkxe";
+    char c[] = "dahhk pdana cajanwh gajkxe";
 
     /* TODO: Decrypt the ciphertext. */
 
