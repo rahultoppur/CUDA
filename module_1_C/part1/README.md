@@ -25,7 +25,7 @@ typedef struct node {
     struct node* next;
 } node_t;
 ```
-Each node has some value associated with it, as well as a pointer to the next node in the list. In this assignment, you'll need to allocate memory using `malloc` and make sure you `free` that memory before your program terminates.
+Each node has some value associated with it, as well as a pointer to the next node in the list. In this assignment, you'll need to allocate memory using `malloc` and make sure you `free` that memory before your program terminates. Each node will be represented by a `stock` struct.
 
 ## File I/O
 You will have to read from a file in order to populate your liked list. `fscanf` can help with this:
@@ -40,14 +40,13 @@ int fscanf(FILE* fp, char* format, ...)
     * `create_portfolio`: Creates a Linked List (where each element is a `stock`)
     * `free_portfolio`: Frees your Linked List (free every node that you have allocated memory for)
     * `print_portfolio`: Prints your Linked List in the following format:
-        * 
         ```txt
         GOOG  | 2000  | 2080  | 1     |
         TSLA  | 600   | 572   | 4     |
         FB    | 255   | 261   | 4     |
         ```
         * You can use the "justify" option of `printf` to obtain the format above
-    * `total_value`: Finds the total value of the portfolio.
+    * `total_value`: Finds the total value of the portfolio
         
 
 You are encouraged to use a tool like `valgrind` to make sure you don't have any memory leaks in your final implementation.
