@@ -14,7 +14,7 @@ One of the main drawbacks of the Caesar shift is that it is extremely vulnerable
 In this assignment, you are given a ciphertext **c** (all in lowercase). You will need to brute-force all possible keys **k** in order to crack the code!
 
 ## Hints
-It can be helpful to think of the "wrap-around" behavior of the Caesar shift with regards to the modulo function. Also, every `char` has a corresponding ASCII value. 
+It can be helpful to think of the "wrap-around" behavior of the Caesar shift with regards to the modulo function. Also, every `char` can be converted to its corresponding `int` for the ASCII character set.
 
 ## Tasks
 * Brute-force all possible keys **k** in order to crack the Caesar shift cipher.
