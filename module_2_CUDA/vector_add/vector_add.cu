@@ -17,7 +17,6 @@ int main() {
     cudaEventCreate(&stop);
     */
 
-    clock_t start, end;
 
     /*
     int a[N];
@@ -60,14 +59,7 @@ int main() {
     cudaMemcpy(dev_b, b, N * sizeof(int), cudaMemcpyHostToDevice);
 
     // perform the vector add with the kernel
-    //cudaEventRecord(start);
-    start = clock();
-    int blockSize, gridSize;
-    blockSize = 1024;
-    gridSize = (int)ceil((float)N/blockSize);
-    add<<<gridSize,blockSize>>>(dev_a, dev_b, dev_c);
-    end = clock();
-    //cudaEventRecord(stop);
+    add<<<1,1>>>(dev_a, dev_b, dev_c); // Review this in more detail...
 
     // copy answer back from device to host
     cudaMemcpy(c, dev_c, N * sizeof(int), cudaMemcpyDeviceToHost);
@@ -89,6 +81,5 @@ int main() {
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, start, stop);
     */
-    printf("Elapsed Time: %f\n", ((double)(end - start)) / CLOCKS_PER_SEC);
 
 }
