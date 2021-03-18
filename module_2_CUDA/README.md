@@ -15,6 +15,6 @@ This assignment will cover:
 
 ## Assignment
 There are four parts to this assignment:
-* ...
+* [Part 1](./multiply)
 
 
