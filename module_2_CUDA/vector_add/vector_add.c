@@ -6,7 +6,7 @@
  * Sum two vectors.
  */
 
-#define N 1000000
+#define N 10000
 
 void vector_add(int* a, int* b, int* c) {
     for(int i=0; i<N; ++i) {
@@ -33,9 +33,9 @@ int main() {
     vector_add(a, b, c);
     end = clock();
 
-    //for(int i=0; i<N; ++i) {
-    //    printf("%-4d + %-4d = %-4d\n", a[i], b[i], c[i]);
-    //}
+    for(int i=0; i<N; ++i) {
+        printf("%-4d + %-4d = %-4d\n", a[i], b[i], c[i]);
+    }
 
 
     free(a);

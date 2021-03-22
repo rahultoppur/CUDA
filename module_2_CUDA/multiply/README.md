@@ -1,7 +1,7 @@
 # Kernel Calls
 
 ## Introduction
-As shown in lecture, kernel code lets our compiler know that the code should be run on the device (our GPU) instead of our host machine. We use `<<<` and `>>>` brackets to specify our memory arguments, and to let our device know how many threads and blocks we would like to instantiate for our program. 
+As shown in lecture, kernel code lets our compiler know that certain code should be run on the device (our GPU) instead of our host macine. We use `<<<NUM_BLOCKS, NUM_THREADS>>>` to specify our memory arguments, and to tell CUDA how many threads and blocks we would like to launch. Threads are grouped into **blocks** called "**thread blocks**," and multiple **thread blocks** make up a "**grid**." Each thread and block maps to specific type of processor on the GPU. 
 
 ## Addition
 Given below is a CPU implementation for a function `add` that adds two numbers. Your task is to create a CUDA program (`add.cu`) that performs the same operation, except this time makes a kernel call. You need to ensure that you allocate memory on the device, transfer your data over, and free the used memory once you are done. Use 1 block and 1 thread when performing this operation.

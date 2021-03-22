@@ -2,12 +2,33 @@
 #include <time.h>
 
 #define N 1000000
+#define T 256
 
 __global__ void add(int* a, int* b, int* c) {
-    int t_id = blockIdx.x * blockDim.x + threadIdx.x;
+    //int t_id = blockIdx.x * blockDim.x + threadIdx.x;
+    
+    //int stride = blockDim.x * gridDim.x;
+    //for (int i=t_id; i < N; i+= stride){
+    //    c[i] = a[i] + b[i];
+    //}
+
+    /*
     if (t_id < N) {
         c[t_id] = a[t_id] + b[t_id];
     }
+    */
+
+    int i = threadIdx.x;
+    printf("i is: %d\n", i);
+    c[i] = a[i] + b[i];    
+    
+    //int index = threadIdx.x;
+    //int stride = blockDim.x;
+    //int stride = blockDim.x;
+
+    //for(int i=index; i<N; i += stride){
+    //    c[i] = a[i] + b[i];
+    //}
 }
 
 int main() {
@@ -48,7 +69,7 @@ int main() {
     cudaMalloc(&dev_c, N * sizeof(int));
 
     // fill vectors a and b with data
-    for(int i=0; i<N; ++i) {
+    for(int i=1; i<N; ++i) {
         a[i] = -1 * i;
         b[i] = 2 * i;
     }
@@ -59,7 +80,8 @@ int main() {
     cudaMemcpy(dev_b, b, N * sizeof(int), cudaMemcpyHostToDevice);
 
     // perform the vector add with the kernel
-    add<<<1,1>>>(dev_a, dev_b, dev_c); // Review this in more detail...
+    add<<<1,T>>>(dev_a, dev_b, dev_c); // Review this in more detail...
+    //add<<<(int)ceil(N/T),T>>>(dev_a, dev_b, dev_c); // Review this in more detail...
 
     // copy answer back from device to host
     cudaMemcpy(c, dev_c, N * sizeof(int), cudaMemcpyDeviceToHost);
@@ -68,6 +90,8 @@ int main() {
     //for(int i=0; i<N; ++i) {
     //    printf("%-4d + %-4d = %-4d\n", a[i], b[i], c[i]);
     //}
+
+    printf("Passed!\n");
 
     cudaFree(dev_a);
     cudaFree(dev_b);
