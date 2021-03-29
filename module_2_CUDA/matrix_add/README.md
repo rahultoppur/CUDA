@@ -1,4 +1,4 @@
-# Matrices
+# Matrix Addition
 
 ## Introduction
 In this module, we will explore GPU performance when it comes to matrix operations. Specifically, we will focus on matrix addition.
@@ -65,16 +65,16 @@ Use UNIX's [`time`](https://man7.org/linux/man-pages/man1/time.1.html) utility t
 
 | N (# of elements)| `matrix_add.c` (sec) | `matrix_add.cu` (sec) |
 | :--- | :--- | :--- |
-| 5 | **TODO** | **TODO** |
-| 50 | **TODO** | **TODO** |
-| 500 | **TODO** | **TODO** |
-| 5000 | **TODO** | **TODO** |
-| 10000 | **TODO** | **TODO** |
-| 15000 | **TODO** | **TODO** |
-| 20000 | **TODO** | **TODO** |
-| 25000 | **TODO** | **TODO** |
-| 30000 | **TODO** | **TODO** |
-| 35000 | **TODO** | **TODO** |
+| 5 | -- | -- |
+| 50 | -- | -- |
+| 500 | -- | -- |
+| 5000 | -- | -- |
+| 10000 | -- | -- |
+| 15000 | -- | -- |
+| 20000 | -- | -- |
+| 25000 | -- | -- |
+| 30000 | -- | -- |
+| 35000 | -- | -- |
 
 Once you have filled in the above values, make a graph to better visualize your findings. Use [Google Colab](https://colab.research.google.com/) to make a quick visualization, following the template for a similar graph below:
 
