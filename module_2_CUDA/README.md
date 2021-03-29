@@ -11,10 +11,11 @@ This assignment will cover:
 * Calls to the kernel
 * Vector Addition
 * Matrix Addition
-* Matrix Multiplication
 
 ## Assignment
-There are four parts to this assignment:
+There are three parts to this assignment:
 * [Part 1](./multiply)
+* [Part 2](./vector_add)
+* [Part 3](./matrix_add)
 
 

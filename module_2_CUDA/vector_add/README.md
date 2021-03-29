@@ -5,7 +5,7 @@ Vectors have an important role in the world of physics and computer graphics. In
 
 
 ## C Implementation (`vector_add.c`) and a Quick Refresher
-Before you start implementing `vector_add.c`, briefly recall the thought process behind vector addition for vectors of an arbitrary length N. For now, we represent each vector as an integer array.
+Before you start implementing `vector_add.c`, briefly recall the thought process behind vector addition for vectors of an arbitrary length `N`. For now, we represent each vector as an integer array.
 
 <img src="../../media/vector_add.png" width="300" height="100">
 
@@ -22,7 +22,7 @@ Provided is some starter code for the **C** implementation of vector addition (`
  */
 
 /* Number of elements in each vector */
- #define N 10000
+ #define N 1000000
 
  void vector_add(int* a, int* b, int* c) {
      /* TODO */
@@ -34,7 +34,7 @@ Provided is some starter code for the **C** implementation of vector addition (`
      ...
      /* Populate vectors with values */
      ...
-     /* Display the answer (print vector c to stdout)*/
+     /* Display the answer (print vector c to stdout) */
      ...
      /* Free memory when done */
  }
@@ -44,7 +44,7 @@ Provided is some starter code for the **C** implementation of vector addition (`
 Create the corresonding CUDA implementation, but leave your memory arguments `<<<NUM_BLOCKS,NUM_THREADS>>>(dev_a, dev_b, dev_c)` when making the `vector_add` kernel call **empty**. We will vary the number of blocks and threads and gather some performance data using `nvprof` in the sections below. 
 
 ## Scenario 1: Establishing a Baseline (`vector_add_baseline.cu`)
-To establish a "baseline" to judge our performance, spawn 1 block with 1 thread when making your call to the kernel. You shouldn't have to change the implementation of your `vector_add` function. Set `N` = `10000`.
+To establish a "baseline" to judge our performance, spawn 1 block with 1 thread when making your call to the kernel. You shouldn't have to change the implementation of your `vector_add` function. Set `N` = `1000000`.
 
 Using the UNIX command `time`, measure the `real` time it takes for `vector_add.c` to run. For example, if the executable for `vector_add.c` is `vector_add_cpu`, you can run: `time ./vector_add_cpu`. Repeat this process once more, but this time give your CUDA exectuable.
   
@@ -61,7 +61,7 @@ Using [`nvprof`](https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nv
 **TODO: Your answer here**
 
 ## Scenario 2: Single Block, Many Threads (`vector_add_threads.cu`)
-Now that we have established our baseline measurement with `N` = `10000` elements, let's see how we can speed things up. We'll make use of SIMT (Single Instruction, Multiple Threads) to achieve high parallel performance for our vector computation. This time, create `vector_add_threads.cu` where you spawn `1` block with `256` threads. Define a constant `T` to represent the number of threads. The idea here is that in parallel, each thread will be responsible for performing a step of the vector addition.
+Now that we have established our baseline measurement with `N` = `1000000` elements, let's see how we can speed things up. We'll make use of SIMT (Single Instruction, Multiple Threads) to achieve high parallel performance for our vector computation. This time, create `vector_add_threads.cu` where you spawn `1` block with `256` threads. Define a constant `T` to represent the number of threads. The idea here is that in parallel, each thread will be responsible for performing a step of the vector addition.
 
 Note that you will now have to make some changes to your `vector_add` kernel. If we only changed the number of threads in our memory arguments, we would be repeating the same computation once per thread instead of spreading it across multiple, parallel threads.
 
@@ -81,10 +81,10 @@ __global__ void vector_add(int* a, int* b, int* c) {
     ...
 }
 ```
-Use `nvprof` to run your implementation on a vector with `N` = `10000` elements. Note down the time spent in the kernel.
+Use `nvprof` to run your implementation on a vector with `N` = `1000000` elements. Note down the time spent in the kernel.
 
 ## Scenario 3: Introducing Blocks (`vector_add_blocks.cu`)
-Finally, we are going to see the impact on performance when adding multiple blocks and threads. The idea is to split up the work of addition between different blocks, each with `N` threads. Once again, launch `256` threads. Define a constant `T` to represent the number of threads.
+Finally, we are going to see the impact on performance when adding multiple blocks and threads. The idea is to split up the work of addition between different blocks, each with `N` threads. Each thread will process a single row operation for the vector addition. Once again, launch `256` threads. Define a constant `T` to represent the number of threads.
 
 When determining the number of blocks you need, note that each block is reserved completely. Functions like `ceil` and `(int)` type-casting might be helpful here.
 
@@ -98,7 +98,7 @@ Write the snippet for calculating the Global Thread ID. Feel free to make use of
 
 Finally, modify the kernel by adding a bounds check so writes beyond the bounds of allocated memory are not allowed. Ensure that threads with a given Thread ID do not exceed `N`.
 
-Use `nvprof` to run your implementation on a vector with `N` = `10000` elements. Note down the time spent in the kernel.
+Use `nvprof` to run your implementation on a vector with `N` = `1000000` elements. Note down the time spent in the kernel.
 
 ## Analysis
 Fill in the table with your results from Scenarios 1-3:

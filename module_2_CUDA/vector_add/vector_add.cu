@@ -1,32 +1,32 @@
 #include <stdio.h>
 #include <time.h>
 
-#define N 1000000
+#define N 10000
 #define T 256
 
 __global__ void add(int* a, int* b, int* c) {
-    //int t_id = blockIdx.x * blockDim.x + threadIdx.x;
+    int t_id = blockIdx.x * blockDim.x + threadIdx.x;
     
     //int stride = blockDim.x * gridDim.x;
     //for (int i=t_id; i < N; i+= stride){
     //    c[i] = a[i] + b[i];
     //}
 
-    /*
     if (t_id < N) {
         c[t_id] = a[t_id] + b[t_id];
     }
-    */
+    
 
-    int i = threadIdx.x;
-    printf("i is: %d\n", i);
-    c[i] = a[i] + b[i];    
+    //int i = threadIdx.x;
+    //printf("i is: %d\n", i);
+    //c[i] = a[i] + b[i];    
     
     //int index = threadIdx.x;
     //int stride = blockDim.x;
     //int stride = blockDim.x;
 
     //for(int i=index; i<N; i += stride){
+    //    printf("index is: %d\n", index);
     //    c[i] = a[i] + b[i];
     //}
 }
