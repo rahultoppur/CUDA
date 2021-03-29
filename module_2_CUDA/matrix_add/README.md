@@ -6,7 +6,7 @@ In this module, we will explore GPU performance when it comes to matrix operatio
 ## C Implementation (`matrix_add.c`) and a Quick Refresher
 Before you start implementing `matrix_add.c`, briefly recall the thought process behind matrix addition for two `N` X `N` matrices (building off of our previous implementation of vector addition).
 
-<img src="../../media/matrix_add.png" width="600" height="80">\
+<img src="../../media/matrix_add.png" width="600" height="80">
 
 ## Matrix Representation
 In general, dynamically allocated memory on the device (our GPU) doesn't allow for two-dimension row-column indexing (`my_matrix[row][col]`) to access 2-D arrays. C uses [**row-major**](https://en.wikipedia.org/wiki/Row-_and_column-major_order) order when storing our matrices--each row ends up being stored one after the other:
@@ -59,9 +59,9 @@ You should have a variable of `dim3` which represents the number of threads with
 You might find a tool like [`cuda-memcheck`](https://docs.nvidia.com/cuda/cuda-memcheck/index.html) to be helpful here.
 
 ## Performance Case Study
-We'll now perform a small case study on performance using the two implementations you just created: `matrix_add.c` and `matrix_add.cu`. 
+We'll now perform a small case study on performance using the two implementations you just created: `matrix_add.c` and `matrix_add.cu`. When gathering your data, **don't** print the result of your calculated matrix--this will cause the runtime to be quite slow.
 
-Use UNIX's [`time`](https://man7.org/linux/man-pages/man1/time.1.html) utility to fill in the following values for N below:
+**TODO**: Use UNIX's [`time`](https://man7.org/linux/man-pages/man1/time.1.html) utility to fill in the following values for N below:
 
 | N (# of elements)| `matrix_add.c` (sec) | `matrix_add.cu` (sec) |
 | :--- | :--- | :--- |
@@ -97,7 +97,9 @@ plt.savefig('matrix_add_perf.png')
 files.download('matrix_add_perf.png')
 ```
 
-**TODO: Paste your version of `matrix_add_perf.png` here**
+**TODO: Paste your version of `matrix_add_perf.png` below:**
+
+**...**
 
 Here is a sample graph for your reference:
 
