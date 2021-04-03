@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 20000
+#define N 37000
 
 
 void matrixAdd(int* a, int* b, int* c) {
@@ -44,6 +44,11 @@ int main() {
 //    printMatrix(a);
 //    printMatrix(b);
 //    printMatrix(c);
+
+    free(a);
+    free(b);
+    free(c);
+
 
     /* Display our matrices */
     
