@@ -8,11 +8,11 @@ When interacting with our images, we are going to be using the PPM format. Some 
 ## RGB, Row-Major Revisited, and Parallelization Idea
 In images, every pixel is comprised of 3 color components--Red, Green, and Blue. Each 8-bit value ranges from `[0,255]`, and different combinations of R,G,B make different colors.
 
-When working with images, we now work in two dimensions (similar to matrix addition in module 2). We make a thread that is responsible to getting the `(x,y)` coordinates of each pixel within our image, and then perform operations on each pixel.
+When working with images, we now work in two dimensions (similar to matrix addition in Module 2). Each thread that we spawn is responsible for performing operations on a certain pixel `(x,y)` in our image.
 
-Recall that in **C**, our memory is stored in row-major order. So, we need to make sure we operate in "chunks" of 3, since we will operate on the R,G,B values for each pixel.
+Recall that in **C** our memory is stored in row-major order. So, we need to make sure we operate in "chunks" of 3, since we will operate on the R,G,B values for each pixel.
 
-> Assume an (x,y) coordinate corresponds to a specific pixel, where x is the row, y is the column, w is the width, and h is the height of our image. Write an expression to get the index of the pixel (assuming row-major order) in an array.\
+> Assume an `(x,y)` coordinate corresponds to a specific pixel, where `x` is the row, `y` is the column, `w` is the width, and `h` is the height of our image. Write an expression to get the index of the pixel (assuming row-major order) in an array.\
 **TODO: Your answer here**
 
 > Assume our image is loaded into a variable called pixel_array. Write an expression to get the `r`, `g`, and `b` value for an arbitrary pixel `p`.\
@@ -25,7 +25,7 @@ Recall that in **C**, our memory is stored in row-major order. So, we need to ma
 * Look the the `ppm.h` file for helpful functions to interact with PPM images.
 * The questions you answered above will help you!
 
-Some starter code has been provided. For each different filter operation below, write a new kernel call. In each scenario, load `safari.ppm` as your image. Save each altered image into this directory, with the given filename. 
+Some starter code has been provided. For each different filter operation below, write a new kernel call. In each task, load `safari.ppm` as your image. Save each altered image into this directory with the given filename. 
 
 To keep things simple, launch `P` blocks, each with a single thread (where `P` is the total number values you need to keep track of for the image).
 
