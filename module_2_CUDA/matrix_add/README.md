@@ -1,7 +1,7 @@
 # Matrix Addition
 
 ## Introduction
-In this module, we will explore GPU performance when it comes to matrix operations. Specifically, we will focus on matrix addition.
+In this module, we will continue to explore GPU performance when it comes to matrix operations. Specifically, we will focus on matrix addition.
 
 ## C Implementation (`matrix_add.c`) and a Quick Refresher
 Before you start implementing `matrix_add.c`, briefly recall the thought process behind matrix addition for two `N` X `N` matrices (building off of our previous implementation of vector addition).
@@ -13,8 +13,8 @@ In general, dynamically allocated memory on the device (our GPU) doesn't allow f
 
 ![Row_Major](../../media/row_major.png)
 
-Write an expression that gets you the element`(row,col)` in an `N` X `N` matrix `M`. Your answer should be in terms of `row`, `col`, and `N`.\
-`**TODO: Your answer here**`
+> Write an expression that gets you the element`(row,col)` in an `N` X `N` matrix `M`. Your answer should be in terms of `row`, `col`, and `N`.\
+**TODO: Your answer here**
 
 Provided is some starter code for the **C** implementation of matrix addition (`matrix_add.c`).
 
@@ -22,15 +22,22 @@ Provided is some starter code for the **C** implementation of matrix addition (`
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * matrix_add.c
+ * 
+ * Adds two matrices and displays the result. 
+ */
+
+/* Dimensions of square matrix N */
 #define N 5
 
 void matrixAdd(int* a, int* b, int* c) {
-    /* TODO */
+    /*...TODO...*/
     ...
 }
 
 void printMatrix(int* m) {
-    /* TODO */
+    /*...TODO...*/
     ...
 }
 
@@ -45,7 +52,6 @@ int main() {
     ...
 }
 ```
-
 ## Hints
 ### A Note on Dimensions
 In comparison to `vector_add.cu`, note that we are now dealing with 2 dimensions. Recall from lecture that CUDA has built-in variables and structures to represent the current block and thread in each dimension.
@@ -53,7 +59,7 @@ In comparison to `vector_add.cu`, note that we are now dealing with 2 dimensions
 ## CUDA Implementation 
 Create the corresponding CUDA implementation (`matrix_add.cu`). When making your call to the kernel, add a bounds check to make sure you are never accessing elements that are outside of the bounds of `N`. 
 
-You should have a variable of `dim3` which represents the number of threads within each block. What is the range of acceptable values for this variable? Why is this the case?\
+> You should have a variable of `dim3` which represents the number of threads within each block. What is the range of acceptable values for this variable? Why is this the case?\
 **TODO: Your answer here**
 
 You might find a tool like [`cuda-memcheck`](https://docs.nvidia.com/cuda/cuda-memcheck/index.html) to be helpful here.
@@ -61,7 +67,7 @@ You might find a tool like [`cuda-memcheck`](https://docs.nvidia.com/cuda/cuda-m
 ## Performance Case Study
 We'll now perform a small case study on performance using the two implementations you just created: `matrix_add.c` and `matrix_add.cu`. When gathering your data, **don't** print the result of your calculated matrix--this will cause the runtime to be quite slow.
 
-**TODO**: Use UNIX's [`time`](https://man7.org/linux/man-pages/man1/time.1.html) utility to fill in the following values for N below:
+> **TODO**: Use the UNIX [`time`](https://man7.org/linux/man-pages/man1/time.1.html) utility to fill in the following values for N below:
 
 | N (# of elements)| `matrix_add.c` (sec) | `matrix_add.cu` (sec) |
 | :--- | :--- | :--- |
@@ -97,9 +103,12 @@ plt.savefig('matrix_add_perf.png')
 files.download('matrix_add_perf.png')
 ```
 
-**TODO: Paste your version of `matrix_add_perf.png` below:**
+> **TODO: Paste your version of `matrix_add_perf.png` below:**
 
 **...**
+
+> What conclusions can you draw from your graph? What happens to the performance of both implementations as the size of `N` gets larger?\
+**TODO: Your answer here**
 
 Here is a sample graph for your reference:
 

@@ -36,10 +36,12 @@ __global__ void caesar_decrypt(char* msg, char* msg_output) {
 }
 
 int main() {
-    char ciphertext[] = "sncr wi rnm cwzihmmd jmzyuwrk yv cp apxcdmp iscxxys";
+    char msg[] = "sncr wi rnm cwzihmmd jmzyuwrk yv cp apxcdmp iscxxys";
 
     /* Allocate memory on the GPU, copy it over,
        and call your kernel. */
+    ...
+    /* Display the contents of msg_output */
     ...
     /* Don't forget to free host and device memory
        when done! */
@@ -47,9 +49,14 @@ int main() {
 }
 ```
 ## Tasks
-specify output constraints...
 * Implement `caesar.cu`, defining a constant N which represents the number of threads to spawn in your program.
 * Finish implementing the `caesar_decrypt` kernel call. Spawn a single block of N threads.
-* Sample output
->What did the message decrypt to?\
+* Output each individual try for **k** to the console. For example:
+    * ```txt
+        dahhkTpdana
+        czggjSoczmz
+        byffiRnbyly
+        ...
+      ```
+* >What did the message decrypt to?\
 **TODO: Your answer here**

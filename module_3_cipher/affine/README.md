@@ -1,4 +1,4 @@
-# Affine Cipher
+# The Affine Cipher
 ## Introduction
 As we wrap up our study of ciphers and CUDA, we will decrypt a message encrypted with the Affine cipher. Like the Caesar-shift, the Affine is also a monoalphabetic substitution cipher. However, each alphabet is now encrypted and decrypted using the respective mathematical function:
 

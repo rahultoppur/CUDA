@@ -34,6 +34,43 @@ int fscanf(FILE* fp, char* format, ...)
 ```
 `fscanf` is identical to other C functions like `scanf` and `printf`, except that the first argument is a file pointer and the second argument is the desired format string. Note that the arguments to `fscanf` **must** be pointers: `fscanf(myfile, &n)` vs. `fscanf(myfile, n)`.  
 
+Some starter code has been provided for you below:
+```c
+/* 
+ * stocks.c 
+ *
+ * Read the contents of portfolio.txt and store each 
+ * entry as a Linked List of stocks.
+ *
+ * Compile with: gcc -o stocks stocks.c
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* TODO: Finish implementing the stock_t type */
+typedef struct stock {
+    char* symbol;       /* Ticker-tape symbol (i.e., GOOG) */
+    ...
+    ...
+
+}stock_t;
+
+/* TODO: Declare your function prototypes here */
+/* Note that you may need to change the signatures provided */
+void print_portfolio(...);
+void create_portfolio(...);
+void free_portfolio(...);
+void total_value(...);
+
+/* Add any other helper functions you would like */
+
+int main() {
+    ...
+    return 0;
+}
+```
+
 ## Tasks
 * The defintion for a `stock` struct in the starter code is incomplete--go ahead and fix this.
 * Implement the following functions:
@@ -50,5 +87,3 @@ int fscanf(FILE* fp, char* format, ...)
         
 
 You are encouraged to use a tool like `valgrind` to make sure you don't have any memory leaks in your final implementation.
-
-Some starter code has been provided for you. Feel free to create any other helper functions you need for this assignment.

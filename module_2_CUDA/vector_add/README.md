@@ -16,7 +16,7 @@ Provided is some starter code for the **C** implementation of vector addition (`
 #include <stdlib.h>
 
 /*
- * vector_add.c A
+ * vector_add.c 
  * 
  * Adds two vectors and displays the result.
  */
@@ -54,10 +54,10 @@ After obtaining both of these values, put them in the table below:
 |`C` (`vector_add.c`) | **TODO: Your answer here** |
 |`CUDA` (`vector_add_baseline.cu`) | **TODO: Your answer here** |
 
-What do the times look like for each program? Is one implementation slower than the other? If so, explain the reason for the resulting discrepancy.\
+> What do the times look like for each program? Is one implementation slower than the other? If so, explain the reason for the resulting discrepancy.\
 **TODO: Your answer here**
 
-Using [`nvprof`](https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof-overview) (a tool that lets you look at the metrics for CUDA kernels), find the `Avg` amount of time spent within the kernel. What CUDA `API` call was called the most?\
+> Using [`nvprof`](https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof-overview) (a tool that lets you look at the metrics for CUDA kernels), find the `Avg` amount of time spent within the kernel. What CUDA `API` call was called the most?\
 **TODO: Your answer here**
 
 ## Scenario 2: Single Block, Many Threads (`vector_add_threads.cu`)
@@ -88,13 +88,13 @@ Finally, we are going to see the impact on performance when adding multiple bloc
 
 When determining the number of blocks you need, note that each block is reserved completely. Functions like `ceil` and `(int)` type-casting might be helpful here.
 
-Write the memory arguments that you would pass in to your kernel call. Your answer should be in terms of `N` (number of elements in your vector) and `T` (number of threads we are spawning).\
-`<<<**TODO: Your answer here**>>>`
+> Write the memory arguments that you would pass in to your kernel call. Your answer should be in terms of `N` (number of elements in your vector) and `T` (number of threads we are spawning).\
+**TODO: Your answer here**
 
 In addition to changing your memory arguments, you will need to re-calculate the Thread ID within your kernel call (`vector_add`). You now need to compute the **Global** Thread ID with respect to the block you are in as well.
 
-Write the snippet for calculating the Global Thread ID. Feel free to make use of CUDA's built-in variables, such as `threadIdx.x`, etc.\
-`Global Thread ID = **TODO: Your answer here**`
+> Write the snippet for calculating the Global Thread ID. Feel free to make use of CUDA's built-in variables, such as `threadIdx.x`, etc.\
+**TODO: Your answer here**
 
 Finally, modify the kernel by adding a bounds check so writes beyond the bounds of allocated memory are not allowed. Ensure that threads with a given Thread ID do not exceed `N`.
 
@@ -108,7 +108,8 @@ Fill in the table with your results from Scenarios 1-3:
 |2: Threads | **TODO** | **TODO** |
 |3: Blocks and Threads | **TODO** | **TODO**|
 
-What do your observations show? What effect do threads and blocks have on the performance of vector addition?
+> What do your observations show? What effect do threads and blocks have on the performance of vector addition?\
+**TODO: Your answer here**
 
 ## Tasks
 * Implement `vector_add.c`

@@ -10,8 +10,19 @@ This assignment will cover:
 
 ## Assignment 
 There are two parts to this assignment:
-* [Part 1](./part1/README.md)
-* [Part 2](./part2/README.md)
+* [Part 1](./part1/README.md) -- Stock Portfolio
+* [Part 2](./part2/README.md) -- The Caesar Shift Cipher
 
+## Module Learning Objectives
+* Becoming familiar with C syntax
+* Reviewing the usage of pointers, data structures, and linked lists
+* Reviewing dynamic memory allocation
+* File I/O
+* Introduce ciphers, encryption, and decryption
 
+## Slides
 
+## Presentation Video
+
+## References
+* https://en.wikipedia.org/wiki/Caesar_cipher
