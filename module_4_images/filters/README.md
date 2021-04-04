@@ -98,8 +98,8 @@ B = .21f*r + .71f*g + .07f*b
 Save your altered image as `safari_grayscale.ppm`.
 
 ## Task 3: Varying Brightness
-Create a kernels `increase_brightness` and `decrease_brightness`. 
-> What types of values make a color brighter? What makes it darker?\
+Create two kernels: `increase_brightness` and `decrease_brightness`. 
+> What types of pixel values make a color brighter? What makes it darker?\
 **TODO: Your answer here**
 
 Save your altered image as `safari_brighter.ppm` and `safari_darker.ppm`, respectively.
