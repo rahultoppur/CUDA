@@ -36,7 +36,7 @@ __global__ void caesar_decrypt(char* msg, char* msg_output) {
 }
 
 int main() {
-    char msg[] = "sncr wi rnm cwzihmmd jmzyuwrk yv cp apxcdmp iscxxys";
+    char msg[] = "kvoh wg hvs qodwhoz ct oggmfwo";
 
     /* Allocate memory on the GPU, copy it over,
        and call your kernel. */
