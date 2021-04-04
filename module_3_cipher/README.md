@@ -19,3 +19,6 @@ There are two parts to this assignment:
 ## Slides
 
 ## Presentation Video
+
+## References
+* https://paulrichmond.shef.ac.uk/teaching/COM4521/
