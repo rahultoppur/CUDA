@@ -16,7 +16,9 @@ Armed with your new CUDA image processing skills, you now have the ability to hi
 ```txt
 Hi!
 
-I went on a really great hike the other day and took this photo. There was some beautiful scenery, and we were outside for 177 minutes.
+I went on a really great hike the other day and took this photo.
+
+There was some beautiful scenery, and we were outside for 177 minutes.
 
 Best,
  X.
@@ -27,7 +29,7 @@ Attachment(1)-hike_sunset.ppm
 ```
 >![Safari](../../media/safari.png)
 
-You find it odd that your friend mentioned such as specific time frame. Using `177` as the length of the encoded message (in bits), write `steg_decrypt.cu` which outputs the hidden message from `hike_sunset.ppm`.
+You find it odd that your friend mentioned such a specific time frame. Using `177` as the length of the encoded message (in bits), write `steg_decrypt.cu` which outputs the hidden message from `hike_sunset.ppm`.
 
 Some starter code for the kernel has been provided for you below.
 ```c
