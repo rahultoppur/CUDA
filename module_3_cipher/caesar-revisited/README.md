@@ -22,6 +22,7 @@ Some psuedocode has been provided for you below:
 /* Number of threads to spawn */
 #define N /*...TODO ...*/
 
+/* Decrypts the ciphertext using brute-force */
 __global__ void caesar_decrypt(char* msg, char* msg_output) {
     /* Include a bounds check here so we don't access 
        elements outside of N */

@@ -33,6 +33,7 @@ You find it odd that your friend mentioned such a specific time frame. Using `17
 
 Some starter code for the kernel has been provided for you below.
 ```c
+/* Decode the secret message embedded in our image */
 __global__ void decode(unsigned char* pixel_array, int width, int height, char* msg) {
     /* Determine the (x,y) coordinate within our image */
     ...
