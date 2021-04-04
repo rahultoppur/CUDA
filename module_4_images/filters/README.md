@@ -3,7 +3,7 @@
 In this assignment, we'll learn some different ways to manipulate images. Specifically, we will implement features such as: grayscale, increasing brightness, and filters.
 
 ## Portable Pixmap Format (PPM) 
-When interacting with our images, we are going to be using the PPM format (add wiki link as well). Some useful code has been provided for you in the `common` directory to load and save these types of images. You can learn more about what each value in the file represents here. Use `display <filename>` to view your images.
+When interacting with our images, we are going to be using the PPM format. Some useful code has been provided for you in the `common` directory to load and save these types of images. You can learn more about what each value in the file represents [here](https://en.wikipedia.org/wiki/Netpbm). Use `display <filename>` to view your images.
 
 ## RGB, Row-Major Revisited, and Parallelization Idea
 In images, every pixel is comprised of 3 color components--Red, Green, and Blue. Each 8-bit value ranges from `[0,255]`, and different combinations of R,G,B make different colors.
