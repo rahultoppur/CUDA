@@ -21,7 +21,7 @@ int add(int a, int b, int* c) {
 
 int main() {
     int c;
-    multiply(6, 7, &c);
+    add(3, 9, &c);
     printf("CPU says: 3 + 9 = %d", c);
 }
 
