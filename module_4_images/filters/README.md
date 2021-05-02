@@ -15,7 +15,7 @@ Recall that in **C** our memory is stored in row-major order. So, we need to mak
 > Assume an `(x,y)` coordinate corresponds to a specific pixel, where `x` is the row, `y` is the column, `w` is the width, and `h` is the height of our image. Write an expression to get the index of the pixel (assuming row-major order) in an array.\
 **TODO: Your answer here**
 
-> Assume our image is loaded into a variable called pixel_array. Write an expression to get the `r`, `g`, and `b` value for an arbitrary pixel `p`.\
+> Assume our image is loaded into a variable called `pixel_array`. Write an expression to get the `r`, `g`, and `b` value for an arbitrary pixel `p`.\
 `r` =  **TODO: Your answer here**\
 `g` =  **TODO: Your answer here** \
 `b` =  **TODO: Your answer here** 
