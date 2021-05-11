@@ -20,9 +20,5 @@ There are two parts to this assignment:
 * File I/O
 * Introduce ciphers, encryption, and decryption
 
-## Slides
-
-## Presentation Video
-
 ## References
 * https://en.wikipedia.org/wiki/Caesar_cipher
