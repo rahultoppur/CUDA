@@ -17,10 +17,6 @@ There are two parts to this assignmnt:
 * Encode and decode messages stored as pixel values within each image
 * Performing bitwise operations to manipulate data
 
-## Slides
-
-## Presentation Video
-
 ## References
 * https://github.com/MikeShah/CUDA
 
