@@ -16,9 +16,5 @@ There are two parts to this assignment:
 * Understand how many threads are needed to solve a given problem 
 * Write kernels that decode messages (using brute force and a formula)
 
-## Slides
-
-## Presentation Video
-
 ## References
 * https://paulrichmond.shef.ac.uk/teaching/COM4521/
