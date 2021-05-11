@@ -28,9 +28,5 @@ There are three parts to this assignment:
 * Write C code and its CUDA equivalent
 
 
-## Slides
-
-## Presentation Video
-
 ## References
 * https://eli.thegreenplace.net/2015/memory-layout-of-multi-dimensional-arrays
