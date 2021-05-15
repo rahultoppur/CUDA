@@ -40,6 +40,7 @@ To keep things simple, launch `P` blocks, each with a single thread (where `P` i
 
 /* Converts the image to grayscale */
 __global__ void make_grayscale(unsigned char* pixel_array, int width, int height) {
+    /* The (x,y) coordinate within the image */
     int x = /*...TODO...*/
     int y = /*...TODO...*/
 
@@ -47,7 +48,7 @@ __global__ void make_grayscale(unsigned char* pixel_array, int width, int height
     if (x < width && y < height) {
         int offset = /*...TODO...*/
 
-        /* Extract pixel values, perform operations, modify pixel_array. */
+        /* Extract pixel values, perform operations, modify pixel_array */
         unsigned char r = /*...TODO...*/
         ...
     }
