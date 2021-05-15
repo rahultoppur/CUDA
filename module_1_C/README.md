@@ -10,8 +10,8 @@ This assignment will cover:
 
 ## Assignment 
 There are two parts to this assignment:
-* [Part 1](./part1/README.md) -- Stock Portfolio
-* [Part 2](./part2/README.md) -- The Caesar Shift Cipher
+* [Part 1](./stocks/README.md) -- Stock Portfolio
+* [Part 2](./caesar/README.md) -- The Caesar Shift Cipher
 
 ## Module Learning Objectives
 * Becoming familiar with C syntax
