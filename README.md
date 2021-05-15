@@ -1,8 +1,8 @@
 # Introduction to CUDA
 ## Course Outline
-* You can complete module 1 before watching any of the lectures. It's mainly a review of C.
+* You can complete module_1 before watching any of the lectures. It's mainly a review of C.
 * Watch Part 1, Part 2, and Part 3 of the lectures
-* You should now be able to complete modules 2 through 4
+* You should now be able to complete module_2 through module_4
 * Watch Part 4 (some optional content)
 
 ## Lectures
