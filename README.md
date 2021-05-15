@@ -10,7 +10,7 @@ A suggested course outline is provided, and you can "submit" your assignments by
 * Watch Part 1, Part 2, and Part 3 of the lectures
 * You should now be able to complete module_2 through module_4
 * Watch Part 4 (some optional content)
-* Tell us what you think of the course by completing the survey [here](https://forms.gle/wHAMUFsC2QRGRR8H7)!
+* Tell us what you think of the course by completing the survey [here](https://forms.gle/WciCCNqduc1RA4tm9)!
 
 ## Lectures
 * [Part 1](https://drive.google.com/file/d/1q4Hi9dKXhtOD0rDh3VvzoUn2OhqHXGJ-/view?usp=sharing)
@@ -22,4 +22,4 @@ A suggested course outline is provided, and you can "submit" your assignments by
 * [Presentation Slides](https://docs.google.com/presentation/d/1SsCLm-Z3ZxQJ9F3DFjk0OKpBNGyDcVNThvxqIELRmic/edit?usp=sharing)
 
 ## Survey
-* https://forms.gle/wHAMUFsC2QRGRR8H7
+* https://forms.gle/WciCCNqduc1RA4tm9
