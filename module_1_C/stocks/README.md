@@ -28,7 +28,7 @@ typedef struct node {
 Each node has some value associated with it, as well as a pointer to the next node in the list. In this assignment, you'll need to allocate memory using `malloc` and make sure you `free` that memory before your program terminates. Each node will be represented by a `stock` struct.
 
 ## Hints
-Remember that a string in an array of characters, so when allocating memory for your struct, you'll also need to allocate memory for each of the strings. Functions like `strlen` (remember to add 1 for the null terminator) and `strcpy` would be useful here.
+* Remember that a string in an array of characters, so when allocating memory for your struct, you'll also need to allocate memory for each of the strings. Functions like `strlen` (remember to add 1 for the null terminator) and `strcpy` would be useful here.
 
 ## File I/O
 You will have to read from a file in order to populate your Linked List. `fscanf` can help with this:
