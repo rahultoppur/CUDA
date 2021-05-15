@@ -3,7 +3,7 @@ Welcome to our course on CUDA Programming!
 
 Please begin by cloning the course repository here: `git clone https://github.com/rahultoppur/CUDA.git`. 
 
-A suggested course outline is provided, and you can "submit" your assignments by pushing any files you create to your repository (most assignments will ask you to modify the `README` as well).
+A suggested course outline is provided, and you can "submit" your assignments by pushing any files you create to your repository (most assignments will ask you to modify the `README.md` as well).
 
 ## Course Outline
 * You can complete module_1 before watching any of the lectures. It's mainly a review of C.
