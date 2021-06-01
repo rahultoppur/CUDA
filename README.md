@@ -6,9 +6,9 @@ Please begin by cloning the course repository here: `git clone https://github.co
 A suggested course outline is provided, and you can "submit" your assignments by pushing any files you create to your repository (most assignments will ask you to modify the `README.md` as well).
 
 ## Course Outline
-* You can complete module_1 before watching any of the lectures. It's mainly a review of C.
+* You can complete `module_1` before watching any of the lectures. It's mainly a review of C.
 * Watch Part 1, Part 2, and Part 3 of the lectures
-* You should now be able to complete module_2 through module_4
+* You should now be able to complete `module_2` through `module_4`
 * Watch Part 4 (some optional content)
 * Tell us what you think of the course by completing the survey [here](https://forms.gle/WciCCNqduc1RA4tm9)!
 
