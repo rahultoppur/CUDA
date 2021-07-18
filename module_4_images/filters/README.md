@@ -56,8 +56,9 @@ __global__ void make_grayscale(unsigned char* pixel_array, int width, int height
 
 int main() {
     const char* input = "safari.ppm";
-    /* Load our PPM Image */
-    ppm_t* myImage = /*...TODO...*/
+    /* Load our PPM Image. Refer to ppm.h in the /common
+       directory of the repository to see how this function works */
+    ppm_t* myImage = loadPPMImage(input)
     ...
 
     int numberOfPixels = /*...TODO...*/
@@ -81,6 +82,7 @@ int main() {
 
     const char* output = "safari-output.ppm";
     /* Save our PPM Image */
+    savePPMImage(output, myImage);
     ...
     /* Free any remaining memory on the host */
     ...
