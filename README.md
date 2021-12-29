@@ -12,6 +12,14 @@ A suggested course outline is provided, and you can "submit" your assignments by
 4. Watch Part 4 (some optional content)
 5. Tell us what you think of the course by completing the survey [here](https://forms.gle/WciCCNqduc1RA4tm9)!
 
+## Course Materials (Colab Notebooks)
+If you don't have a NVIDIA CUDA-enabled GPU, you can still complete this course using the following Google Colab notebooks. Right-click and `Save As`, and then upload each notebook to Google Colab to start working on each module!
+
+* [Module 1](./Module_1.ipynb)
+* [Module 2](./Module_2.ipynb)
+* [Module 3](./Module_3.ipynb)
+* [Module 4](./Module_4.ipynb)
+
 ## Lectures
 
 Please complete the following modules in this order.
