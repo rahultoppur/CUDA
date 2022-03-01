@@ -35,6 +35,6 @@ Please complete the following modules in this order.
 
 ## Survey
 
-- Please complete the survey once you have completed all 4 modules.
+Please complete the survey once you have completed all 4 modules.
 
 * https://forms.gle/WciCCNqduc1RA4tm9
